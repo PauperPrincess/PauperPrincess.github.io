@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PWR Set Doc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+    	td{border: 1px solid black;}
+    </style>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<script>
+		const URLS = ["Pumpkin Rapper"];
+		async function getData(CARDNAME) {
+			const url = "https://raw.githubusercontent.com/PauperPrincess/PauperPrincess.github.io/refs/heads/main/lists/PWR-list.json";
+			try {
+		    	response = await fetch(url);
+		    	if (!response.ok) {
+		    		throw new Error(`Response status: ${response.status}`);
+		    	}
+				const result = await response.json();
+		    	return "https://raw.githubusercontent.com/PauperPrincess/PauperPrincess.github.io/refs/heads/main/sets/PWR-files/img/" + result.find(obj => obj.card_name === CARDNAME).position.toString() + ".png";
+			} catch (error) {
+		    	console.error(error.message);
+			}
+		}
+
+	</script>
+
+	<div class="container">
+		<div class = "row">
+		    <h1>What Is Power Rangers?</h1>
+		    <p>Power Rangers, set code PWR, and PWE is a top down set, with a heavy focus on a fun limited environment Power Rangers has 3 components to the set, and is currently approaching to wrap up vision design for the main set</p>
+		    <p>The 3 main parts of Power Rangers are:</p>
+		    <ul>
+		    	<li>the Main set, a standard-legal large set, focused on representing the main 30 seasons of the Television Show. Intended to be played in a standard pick-one draft format. </li>
+		    	<li>A 60 pack Jumpstart set, with each team of heroes and villains getting one pack</li>
+		    	<li>4 Commander decks, each focused on different aspects of the world at large</li>
+		    </ul>
+		    <p>The goal for the set is to first and foremost make a fun limited environment, then to make cards that accurately represent characters and moments from the show.</p>
+		</div>
+		<div class="row">
+		    <h1 id="DesignGuidelines">Design Guidelines</h1>
+		    <h2>Legendary Status</h2>
+		    <p>Power rangers as a show almost exclusively features named character and extras. While some things are obvious, this section breaks down wether a creature will be legendary or not.</p>
+		</div>
+		<div class="row">
+			<div class = "col-sm-8">
+			    <h3 id="MOTW">Monsters of the Week: <em style="color:Firebrick;">Not Legendary</em></h3>
+			    <p>While integral parts of the show, monsters of the week are generic creatures, often with generic names. Pumpkin Rapper, the fearcats Sat Bot, or Mad Mike the Pizza Chef. Ok maybe not that last one in name terms. Monsters of the week are often expendable, and while some are iconic enough to get cards, as a whole, they aren’t legendary. If a monster of the week, like Vargoyle or the Galactic Ninjas, are treated with gravitas in show, they may be an exception to this general rule. Pumpkin Rapper will obviously keep his name as a creature</p>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" onload="this.onload=null; getData(&quot;Pumpkin Rapper&quot;).then(PromiseResult => this.src=PromiseResult);" width="90%">
+			</div>
+		</div>
+		<div class="row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg"  onload="this.onload=null; getData(&quot;Technobabling Inventor&quot;).then(PromiseResult => this.src=PromiseResult);" width="90%">
+			</div>
+			<div class = "col-sm-8">
+			    <h3 id="Identities">Civilian Identities of rangers: <em style="color:firebrick;">Not Legendary</em></h3>
+			    <p>The Rangers live normal lives outside of operating as rangers. While often not depicted as civilians on cards, due to the Mighty Morph mechanic, when they are, they are de-legended. For example, Billy Cranston -> Technobabling Scientist. This is for two reasons. The first is that we need to draw the line somewhere, not every card can be legendary, and the civilian identities of rangers often aren’t. The second is that these cards often have simpler effects, due to being smaller creatures and less powerful than their morphed counterparts, and would thus be less interesting as commander seeds, and often want to be at lower rarites/ so making these aspects of the character less legendary than the morphed versions leads to better gameplay. Outside of the main draft set, however, these cards are being put straight into commander, and should be legendary</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class = "col-sm-8">
+			    <h3 id="Rangers">Morphed Rangers: <em style="color:green;">Legendary</em></h3>
+			    <p>When the rangers are morphed, they become pillars of the community, idols that people look up to and aspire to be. In this sense, they are the very definition of legendary. Beyond this, the term “Legendary Ranger” is often used to refer to rangers from the past, such as with Super Mega force’s Legendary Ranger mode. The usage of legendary on these also allows them to be ever so slightly stronger than the average card of that cost, leading to more explosive cards for the rangers, exactly how being a ranger should feel.</p>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Preston, Ninja Steel Blue&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>				
+		<div class="row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Dr. K&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-8">
+			    <h3 id="Civilians">Civilians: <em style="color:goldenrod;">Case-by-Case Basis</em></h3>
+			    <p>Civilians in power rangers are anyone who is not a ranger or a villain. Represented in this set with the Citizen type, this places characters like Bulk and Skull, Dr. K, and Professor Phenomenous all in the same category. Some of these characters, like Dr. K, who doomed the world with a computer virus and is desperately trying to make up for it, are obviously fan favorite characters that need a legendary variant. Others, like Profesor Phenomenous barely appear in a third of the episodes of their season, and may not even be deserving of a card. Outside of the main set, these characters that may not have toed the line into legend should be represented as legendary creatures, for the same reason as stated above. In cases where they don’t make the cut to be legendary, they should be delegened.</p>
+			</div>
+		</div>
+		<div class="row">	
+			<div class = "col-sm-8">
+			    <h3 id="Zords">Zords: <em style="color:green;">Legendary</em></h3>
+			    <p>The gattai mechanic makes legendary near pointless on megazords, as even a second copy of a megazord can be combined with the first copy. Beyond that, due to names changing when combined, if you’ve Gattai’d your first megazord, you can cast a second copy. Flavorwise, these hulking machines are one of a kind, some are even gods.</p>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Time Force Megazord&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>
+		<div class="row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Venjix, K&apos;s Great Mistake&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-8">
+			    <h3 id="Generals">Generals and above: <em style="color:green;">Legendary</em></h3>
+			    <p>A general is any Villian who appears in multiple episodes, can speak, and is treated with a level of gravitas by the show. Examples of generals include: Dayu, Tenaya-7, and Goldar. Any villain who reaches these categories is worthy of being legendary</p>
+			</div>
+		</div>
+		<div class = "row">
+		    <h2 id="Scale">Scale</h2>
+		    <p>Power rangers characters exist on many scales. Typically, a creature is either: a Civilian, a ranger/monster, or a megazord/giant monster. These 3 characters exist at different scales. In general, a normal civilian should die to a ranger or monster, and a ranger or monster should die to a megazord or giant monster</p>
+		    <p>Giant monsters within the set are represented by the Giganitfy Mechanic, which returns them as 5/4 creatures and a giant in addition to their other types. Rangers in civilian form are also represented by the Mighty Morph mechanic, which puts them down as 2/2s. </p>
+		    <p>In general, civilains should be power 1, unless they are stronger than the average civilian (such as Rocky being good at martial arts), in which case they should be power 2. The bulk of creatures should represent rangers and monsters, which should range from power 2 to power 4, depending on their unique skill set, and Megazords should be represented with power 4 and greater.</p>
+		</div>
+		<div class = "row">
+			<h1>Mechanics</h1>
+		</div>
+		<div class = "row">
+			<div class = "col-sm-8">
+				<h2>Gattai</h2>
+				<p> Gattai is a mechanic that represents combining robots. It is a variant on mutate designed to be simpler to understand. A spell with Gattai has an alternate cost. If cast for that cost, you put it over a target vehicle you own. When you do, they become one vehicle with a combined power and toughness, the abilities of both vehicles (including the smallest crew cost), and a conjoined name and mana cost </p>
+				<p> Not all vehicles within the set have gattai, and you can gattai onto a creature without gattai. Try saying that 5 times fast.</p>
+				<p>For example, if you have Shorikai, the genesis engine. In play, and Time force megazord in hand, you can cast the Time Force megazord ontop of Shorikai for 2R. If you do they become</p>
+				<table>
+					<tr style="border: 1px solid black;"><td>Time Force Megazord Shorikai, Genesis Engine 5RWU</td></tr>
+					<tr style="border: 1px solid black;"><td>Legendary Creature - Vehicle</td></tr>
+					<tr style="border: 1px solid black;"><td>THIS enters with your choice of a menace or haste counter (As it has already entered, it doesn’t matter)<br>Crew 2<br>1, T: Draw two cards, then discard a card. Create a 1/1 colorless Pilot creature token with “This token crews Vehicles as though its power were 2 greater.”<br>Crew 8 (This crew ability can still be used, but it is generally better not to.)</td></tr>
+					<tr style="border: 1px solid black;"><td>12/12</td></tr>
+				</table>
+				<p> The full reminder text of Gattai is as follows: </p>
+				<table>
+					<tr style="border: 1px solid black;"><td>Gattai MV (You can cast this spell for it’s Gattai cost. If you do, put it over target vehicle you own. they become one vehicle with combined power, toughness, name, mana cost, and abilities.)</td></tr>
+				</table>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Time Force Megazord&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>
+		<div class="row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Technobabling Inventor&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-8">
+				<h2>Nimble</h2>
+				<p>The power rangers above all else, don’t typically fly. That’s not to say things don’t fly in the power rangers universe, but flying is RARE, not a thing that many creatures do. As a result, evasion is trickier to fit in, thus, i’ve introduced a new Keyword similar to skulk or menace, called Nimble. This keyword has actually shown up in semi-canon magic before, on a playtest card. </p>
+				<p>Nimble means “This creature can’t be blocked by creatures with power 3 or greater.” The reminder text stays much the same.</p>
+				<p>Nimble is primary in Blue and White, and secondary in Red, as fast creatures are often rather nimble.</p>
+			</div>
+		</div>
+		<div class = "row">
+			<h2>Mighty Morph and Demorph</h2>
+		</div>
+		<div class = "row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Flynn, Ranger Series Blue&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Zordon, Universe&apos;s Protector&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Totally Average Civilian&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>
+		<div class = "row">
+			<p> The power rangers are most known for two things, Giant Robots, and transforming into… Not spandex. The term morph is used within power rangers to refer to the act of transforming into the colorful alter egos they inhabit. Morph is also a pre existing Magic Keyword, however, morph is a very very underpowered mechanic, it’s also a bit… bland. This set introduces a new variant on Morph called “Mighty Morph” Mighty morph works exactly the same as morph, except it gives them Nimble. Demorph is a cloak or manifest variant with two key differences: </p>
+			<ul>
+				<li>You can’t turn a demorphed creature face up unless it can morph</li>
+				<li>Demorph is mostly used on creatures you control, as a way to cheat death or reuse Turn face up triggers.</li>
+			</ul>
+		</div>
+		<div class = "row">
+			<div class = "col-sm-8">
+				<h2> Gigantify </h2>
+				<p>What good are giant robots without equally giant monsters? Gigantify is essentially a combination of Eternalize, a keyword from Innistrad, and giant growth. You don't need a magic wand to make your monsters grow, to gigantify a creature, you exile it from your graveyard as a sorcery and pay it’s Gigantify cost. It comes back as a token with three +1/+1 counters on it (Like it has a permanent Giant Growth on it!)</p>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Pumpkin Rapper&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;The Squid Ink Inc. Squidrill™&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+			<div class = "col-sm-8">
+				<h2> Crew </h2>
+				<p>Crew is a mechanic originating in Kaladesh, as part of vehicles. Vehicles may look like creatures-- they have a power and toughness box, after all-- but they aren't. At least not without a driver. Anything can drive a vehicle, even another vehicle (as long as someone's driving it), and two creatures can even work together to drive, in case their feet don't reach the pedals.</p>
+				<p>In order to drive a vehicle, it needs to be crewed with the Crew mechanic. To crew a vehicle, tap creatures with total power equal to the crew cost, and that vehicle is now crewed, which means it's a creature.</p>
+				<p>Vehicles in Power Rangers mostly represent Zords, so they tend to be rather big, though there are a few non-mecha vehicles.</p> 
+			</div>
+		</div>
+		<div class = "row">
+			<div class ="col-sm-8">
+				<h2>Teamwork</h2>
+				<p>The Power Rangers are teams of typically three or five clad in colorful sp... Nanofiber. Teamwork is a mechanic first introduced in Marvel's Super Heroes, and it makes all the sense to be in this set.</p>
+				<p>Teamwork represents an aditional cost to cast a spell, relying on your creatures to help! Unlike convoke however, the power of your creatures matters when paying a teamwork cost. Emrakul is much better at working as a team than a squirrel, after all.</p>
+				<p>Teamwork costs are paid just like crew costs. This set has a lot of cards with Teamwork 5, representing all 5 rangers coming together, perhaps to combine their weapons into one!</p>
+			</div>
+			<div class = "col-sm-4">
+				<img class="img-responsive" onload="this.onload=null; getData(&quot;Joint Finisher&quot;).then(PromiseResult => this.src=PromiseResult);" src="https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" width="90%">
+			</div>
+		</div>
+		<div class = "row">
+			<h1> Archetypes </h1>
+			<table>
+				<tr>
+					<th>Colors</th>
+					<th>Name</th>
+					<th>Speed</th>
+					<th>Variety</th>
+					<th>Description</th>
+					<th>Long Description</th>
+				</tr>
+				<tr>
+					<th>WU</th>
+					<td></td>
+					<td>Slow</td>
+					<td>New</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>UB</th>
+					<td>Technological Mastery</td>
+					<td>Medium</td>
+					<td>Old</td>
+					<td>Artifact Tribal</td>
+					<td>Artifact after artifact, creatures, equipment, vehicles. Invent your way to victory </td>
+				</tr>
+				<tr>
+					<th>BR</th>
+					<td>It’s Time To Conquer Earth!</td>
+					<td>Slow</td>
+					<td>Old</td>
+					<td>Control + Villain Tribal</td>
+					<td>Send Villains down to Wreak havoc upon the earth, blowing things up so that nothing, not even those brats, get in the way of your plans!</td>
+				</tr>
+				<tr>
+					<th>RG</th>
+					<td>Magical Source, Mystic Force!</td>
+					<td>Fast</td>
+					<td>New</td>
+					<td>"Reparte"</td>
+					<td>Cast instant and sorcery that call upon ancient magics to make creatures grow, or defeat your foes , and bring the storm!)</td>
+				</tr>
+				<tr>
+					<th>GW</th>
+					<td>Rangers Together, Samurai Forever!</td>
+					<td>Fast</td>
+					<td>Twist</td>
+					<td>Go Wide + Citizen Tribal</td>
+					<td>Rely on the power of your friends, go wide and let your allies help from the back seat! </td>
+				</tr>
+				<tr>
+					<th>WB</th>
+					<td>I will live on!</td>
+					<td>Slow</td>
+					<td>Old</td>
+					<td>Sacrifice / Death Triggers</td>
+					<td>Sometimes, the greatest choices require the hardest wills, and it takes a great sacrifice to do the right thing. Use Rangers and Villains alike to get death triggers right when you need them</td>
+				</tr>
+				<tr>
+					<th>UR</th>
+					<td>We Need Megazord Power!</td>
+					<td>Meduim</td>
+					<td>New</td>
+					<td>Tapped Triggers</td>
+					<td>Let your creatures attack, crew, or work as a team to get tap triggers</td>
+				</tr>
+				<tr>
+					<th>BG</th>
+					<td>Make my Monster Grow!</td>
+					<td>Slow</td>
+					<td>Twist</td>
+					<td>Reanimator via Gigantify </td>
+					<td>Every monster you send out is just buying time, and who doesn't love a good rerun. Gigantify monsters from your graveyard, to give them a second chance </td>
+				</tr>
+				<tr>
+					<th>RW</th>
+					<td>It’s Morphin Time!</td>
+					<td>Fast</td>
+					<td>Twist</td>
+					<td>Aggro Sabotuer via mighty morph</td>
+					<td>Have your creatures morph. Let them get in, and strike while the iron is hot! </td>
+				</tr>
+				<tr>
+					<th>GU</th>
+					<td>Battilizer Power</td>
+					<td>Medium</td>
+					<td>Old</td>
+					<td>Modified</td>
+					<td>Sometimes just a power ranger is enough, when that happens it's time to activate a battelizer, and modify your creatures to make them even more powerful! </td>
+				</tr>
+		</div>
+	</div>
+</body>
+</html>
