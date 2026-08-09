@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="../sets/PWR-files/icon.png"/>
+	<link rel="stylesheet" href="../resources/header.css">
+	<title>PWR visual preview</title>
+	<script title="root">
+		const rootPath = "..";
+	</script>
+	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('../resources/beleren.ttf');
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			opacity: 0;
+			transform: rotateY(0deg) rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+			border-radius: 3.733% / 2.677%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+			border-radius: 3.733% / 2.677%;
+		}
+		.close-btn {
+			background: url('../img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('../img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+			border-radius: 3.733% / 2.677%;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 80px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+			border-radius: 3.733% / 2.677%;
+		}
+		.flip-btn {
+			background: url('../img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('../img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 5%;
+			width: fit-content;
+			max-width: 90%;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: grid;
+			grid-template-columns: 1fr;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
+		}
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
+		}
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="../img/dot.png" />
+	<img class="preload-hidden" src="../sets/PWR-files/logo.png" />
+	<img class="preload-hidden" src="../sets/PWR-files/icon.png" />
+		<div class="header">
+		<div class="search-grid">
+			<a onclick="window.location.href = rootPath + '/'"><img class="sg-logo" id="header-banner"></a>
+			<img class="sg-icon" id="header-search" onclick="goToSearch()">
+			<div style="position: relative; width: 100%;">
+				<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+				<div id="tag-dropdown" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; border: 1px solid #d5d9d9; z-index: 1000; max-height: 200px; overflow-y: auto; color: black; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></div>
+			</div>
+			<a onclick="window.location.href = rootPath + '/all-sets'"><img id="header-sets" class="sg-icon">Sets</a>
+			<a id="header-articles-link" onclick="window.location.href = rootPath + '/all-articles'" style="display: none;"><img id="header-articles" class="sg-icon">Articles</a>
+			<a id="header-decks-link" onclick="window.location.href = rootPath + '/decks'" style="display: none;"><img id="header-decks" class="sg-icon">Decks</a>
+			<a onclick="window.location.href = rootPath + '/deckbuilder'"><img id="header-deckbuilder" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img id="header-random" class="sg-icon">Random</a>
+		</div>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.getElementById("header-banner").src = rootPath + "/img/banner.png";
+			document.getElementById("header-search").src = rootPath + "/img/search.png";
+			document.getElementById("header-sets").src = rootPath + "/img/sets.png";
+			document.getElementById("header-articles").src = rootPath + "/img/articles.png";
+			document.getElementById("header-decks").src = rootPath + "/img/deck.png";
+			document.getElementById("header-deckbuilder").src = rootPath + "/img/deckbuilder.png";
+			document.getElementById("header-random").src = rootPath + "/img/random.png";
+
+			// Hide Articles if none exist
+			fetch(rootPath + '/all-articles.html', { method: 'HEAD' })
+				.then(response => {
+					if (response.ok) document.getElementById('header-articles-link').style.display = 'flex';
+				}).catch(() => {});
+
+			// Hide Decks if none exist
+			fetch(rootPath + '/decks.html', { method: 'HEAD' })
+				.then(response => {
+					if (response.ok) document.getElementById('header-decks-link').style.display = 'flex';
+				}).catch(() => {});
+		});
+
+		function goToSearch() {
+			window.location.href = rootPath + "/search";
+		}
+	</script>
+
+	<div class="dropdown" id="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="../previews/PWR"><img src="../sets/PWR-files/icon.png">Power Rangers</a>
+	
+		</div>
+		<div class="banner">
+		<img class="logo" src="../sets/PWR-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+					<div class="container"><img loading="lazy" alt="sets\PWR-files\img\159.png" id="PWR_159" data-flag="@X" onclick="openSidebar('PWR_159',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\269.png" id="PWR_269" data-flag="@X" onclick="openSidebar('PWR_269',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\161.png" id="PWR_161" data-flag="@X" onclick="openSidebar('PWR_161',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\163.png" id="PWR_163" data-flag="@X" onclick="openSidebar('PWR_163',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\165.png" id="PWR_165" data-flag="@X" onclick="openSidebar('PWR_165',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\268.png" id="PWR_268" data-flag="@X" onclick="openSidebar('PWR_268',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\160.png" id="PWR_160" data-flag="@X" onclick="openSidebar('PWR_160',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\162.png" id="PWR_162" data-flag="@X" onclick="openSidebar('PWR_162',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\164.png" id="PWR_164" data-flag="@X" onclick="openSidebar('PWR_164',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\166.png" id="PWR_166" data-flag="@X" onclick="openSidebar('PWR_166',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\125.png" id="PWR_125" data-flag="@X" onclick="openSidebar('PWR_125',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\132.png" id="PWR_132" data-flag="@X" onclick="openSidebar('PWR_132',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\138.png" id="PWR_138" data-flag="@X" onclick="openSidebar('PWR_138',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\145.png" id="PWR_145" data-flag="@X" onclick="openSidebar('PWR_145',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\152.png" id="PWR_152" data-flag="@X" onclick="openSidebar('PWR_152',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\126.png" id="PWR_126" data-flag="@X" onclick="openSidebar('PWR_126',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\133.png" id="PWR_133" data-flag="@X" onclick="openSidebar('PWR_133',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\139.png" id="PWR_139" data-flag="@X" onclick="openSidebar('PWR_139',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\146.png" id="PWR_146" data-flag="@X" onclick="openSidebar('PWR_146',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\153.png" id="PWR_153" data-flag="@X" onclick="openSidebar('PWR_153',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\127.png" id="PWR_127" data-flag="@X" onclick="openSidebar('PWR_127',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\134.png" id="PWR_134" data-flag="@X" onclick="openSidebar('PWR_134',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\140.png" id="PWR_140" data-flag="@X" onclick="openSidebar('PWR_140',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\147.png" id="PWR_147" data-flag="@X" onclick="openSidebar('PWR_147',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\154.png" id="PWR_154" data-flag="@X" onclick="openSidebar('PWR_154',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\128.png" id="PWR_128" data-flag="@X" onclick="openSidebar('PWR_128',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\135.png" id="PWR_135" data-flag="@X" onclick="openSidebar('PWR_135',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\141.png" id="PWR_141" data-flag="@X" onclick="openSidebar('PWR_141',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\148.png" id="PWR_148" data-flag="@X" onclick="openSidebar('PWR_148',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\155.png" id="PWR_155" data-flag="@X" onclick="openSidebar('PWR_155',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\129.png" id="PWR_129" data-flag="@X" onclick="openSidebar('PWR_129',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\136.png" id="PWR_136" data-flag="@X" onclick="openSidebar('PWR_136',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\142.png" id="PWR_142" data-flag="@X" onclick="openSidebar('PWR_142',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\149.png" id="PWR_149" data-flag="@X" onclick="openSidebar('PWR_149',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\156.png" id="PWR_156" data-flag="@X" onclick="openSidebar('PWR_156',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\130.png" id="PWR_130" data-flag="@X" onclick="openSidebar('PWR_130',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\137.png" id="PWR_137" data-flag="@X" onclick="openSidebar('PWR_137',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\143.png" id="PWR_143" data-flag="@X" onclick="openSidebar('PWR_143',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\150.png" id="PWR_150" data-flag="@X" onclick="openSidebar('PWR_150',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\157.png" id="PWR_157" data-flag="@X" onclick="openSidebar('PWR_157',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\131.png" id="PWR_131" data-flag="@X" onclick="openSidebar('PWR_131',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\255.png" id="PWR_255" data-flag="@X" onclick="openSidebar('PWR_255',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\144.png" id="PWR_144" data-flag="@X" onclick="openSidebar('PWR_144',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\151.png" id="PWR_151" data-flag="@X" onclick="openSidebar('PWR_151',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\158.png" id="PWR_158" data-flag="@X" onclick="openSidebar('PWR_158',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\73.png" id="PWR_73" data-flag="@X" onclick="openSidebar('PWR_73',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\84.png" id="PWR_84" data-flag="@X" onclick="openSidebar('PWR_84',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\95.png" id="PWR_95" data-flag="@X" onclick="openSidebar('PWR_95',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\112.png" id="PWR_112" data-flag="@X" onclick="openSidebar('PWR_112',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\114.png" id="PWR_114" data-flag="@X" onclick="openSidebar('PWR_114',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\74.png" id="PWR_74" data-flag="@X" onclick="openSidebar('PWR_74',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\85.png" id="PWR_85" data-flag="@X" onclick="openSidebar('PWR_85',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\96.png" id="PWR_96" data-flag="@X" onclick="openSidebar('PWR_96',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\267.png" id="PWR_267" data-flag="@X" onclick="openSidebar('PWR_267',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\115.png" id="PWR_115" data-flag="@X" onclick="openSidebar('PWR_115',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\75.png" id="PWR_75" data-flag="@X" onclick="openSidebar('PWR_75',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\86.png" id="PWR_86" data-flag="@X" onclick="openSidebar('PWR_86',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\97.png" id="PWR_97" data-flag="@X" onclick="openSidebar('PWR_97',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\251.png" id="PWR_251" data-flag="@X" onclick="openSidebar('PWR_251',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\116.png" id="PWR_116" data-flag="@X" onclick="openSidebar('PWR_116',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\76.png" id="PWR_76" data-flag="@X" onclick="openSidebar('PWR_76',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\87.png" id="PWR_87" data-flag="@X" onclick="openSidebar('PWR_87',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\98.png" id="PWR_98" data-flag="@X" onclick="openSidebar('PWR_98',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\271.png" id="PWR_271" data-flag="@X" onclick="openSidebar('PWR_271',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\117.png" id="PWR_117" data-flag="@X" onclick="openSidebar('PWR_117',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\77.png" id="PWR_77" data-flag="@X" onclick="openSidebar('PWR_77',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\88.png" id="PWR_88" data-flag="@X" onclick="openSidebar('PWR_88',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\99.png" id="PWR_99" data-flag="@X" onclick="openSidebar('PWR_99',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\106.png" id="PWR_106" data-flag="@X" onclick="openSidebar('PWR_106',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\118.png" id="PWR_118" data-flag="@X" onclick="openSidebar('PWR_118',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\78.png" id="PWR_78" data-flag="@X" onclick="openSidebar('PWR_78',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\89.png" id="PWR_89" data-flag="@X" onclick="openSidebar('PWR_89',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\100.png" id="PWR_100" data-flag="@X" onclick="openSidebar('PWR_100',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\107.png" id="PWR_107" data-flag="@X" onclick="openSidebar('PWR_107',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\119.png" id="PWR_119" data-flag="@X" onclick="openSidebar('PWR_119',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\79.png" id="PWR_79" data-flag="@X" onclick="openSidebar('PWR_79',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\90.png" id="PWR_90" data-flag="@X" onclick="openSidebar('PWR_90',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\101.png" id="PWR_101" data-flag="@X" onclick="openSidebar('PWR_101',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\108.png" id="PWR_108" data-flag="@X" onclick="openSidebar('PWR_108',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\120.png" id="PWR_120" data-flag="@X" onclick="openSidebar('PWR_120',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\80.png" id="PWR_80" data-flag="@X" onclick="openSidebar('PWR_80',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\91.png" id="PWR_91" data-flag="@X" onclick="openSidebar('PWR_91',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\102.png" id="PWR_102" data-flag="@X" onclick="openSidebar('PWR_102',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\109.png" id="PWR_109" data-flag="@X" onclick="openSidebar('PWR_109',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\121.png" id="PWR_121" data-flag="@X" onclick="openSidebar('PWR_121',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\81.png" id="PWR_81" data-flag="@X" onclick="openSidebar('PWR_81',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\92.png" id="PWR_92" data-flag="@X" onclick="openSidebar('PWR_92',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\103.png" id="PWR_103" data-flag="@X" onclick="openSidebar('PWR_103',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\110.png" id="PWR_110" data-flag="@X" onclick="openSidebar('PWR_110',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\122.png" id="PWR_122" data-flag="@X" onclick="openSidebar('PWR_122',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\82.png" id="PWR_82" data-flag="@X" onclick="openSidebar('PWR_82',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\93.png" id="PWR_93" data-flag="@X" onclick="openSidebar('PWR_93',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\104.png" id="PWR_104" data-flag="@X" onclick="openSidebar('PWR_104',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\111.png" id="PWR_111" data-flag="@X" onclick="openSidebar('PWR_111',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\123.png" id="PWR_123" data-flag="@X" onclick="openSidebar('PWR_123',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\218.png" id="PWR_218" data-flag="@X" onclick="openSidebar('PWR_218',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\94.png" id="PWR_94" data-flag="@X" onclick="openSidebar('PWR_94',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\225.png" id="PWR_225" data-flag="@X" onclick="openSidebar('PWR_225',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\230.png" id="PWR_230" data-flag="@X" onclick="openSidebar('PWR_230',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\234.png" id="PWR_234" data-flag="@X" onclick="openSidebar('PWR_234',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\217.png" id="PWR_217" data-flag="@X" onclick="openSidebar('PWR_217',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\219.png" id="PWR_219" data-flag="@X" onclick="openSidebar('PWR_219',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\226.png" id="PWR_226" data-flag="@X" onclick="openSidebar('PWR_226',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\229.png" id="PWR_229" data-flag="@X" onclick="openSidebar('PWR_229',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\233.png" id="PWR_233" data-flag="@X" onclick="openSidebar('PWR_233',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\216.png" id="PWR_216" data-flag="@X" onclick="openSidebar('PWR_216',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\220.png" id="PWR_220" data-flag="@X" onclick="openSidebar('PWR_220',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\224.png" id="PWR_224" data-flag="@X" onclick="openSidebar('PWR_224',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\228.png" id="PWR_228" data-flag="@X" onclick="openSidebar('PWR_228',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\232.png" id="PWR_232" data-flag="@X" onclick="openSidebar('PWR_232',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\83.png" id="PWR_83" data-flag="@X" onclick="openSidebar('PWR_83',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\221.png" id="PWR_221" data-flag="@X" onclick="openSidebar('PWR_221',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\223.png" id="PWR_223" data-flag="@X" onclick="openSidebar('PWR_223',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\227.png" id="PWR_227" data-flag="@X" onclick="openSidebar('PWR_227',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\231.png" id="PWR_231" data-flag="@X" onclick="openSidebar('PWR_231',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\5.png" id="PWR_5" data-flag="@X" onclick="openSidebar('PWR_5',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\272.png" id="PWR_272" data-flag="@X" onclick="openSidebar('PWR_272',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\105.png" id="PWR_105" data-flag="@X" onclick="openSidebar('PWR_105',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\113.png" id="PWR_113" data-flag="@X" onclick="openSidebar('PWR_113',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\124.png" id="PWR_124" data-flag="@X" onclick="openSidebar('PWR_124',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\13.png" id="PWR_13" data-flag="@X" onclick="openSidebar('PWR_13',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\17.png" id="PWR_17" data-flag="@X" onclick="openSidebar('PWR_17',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\222.png" id="PWR_222" data-flag="@X" onclick="openSidebar('PWR_222',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\44.png" id="PWR_44" data-flag="@X" onclick="openSidebar('PWR_44',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\59.png" id="PWR_59" data-flag="@X" onclick="openSidebar('PWR_59',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\11.png" id="PWR_11" data-flag="@X" onclick="openSidebar('PWR_11',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\22.png" id="PWR_22" data-flag="@X" onclick="openSidebar('PWR_22',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\31.png" id="PWR_31" data-flag="@X" onclick="openSidebar('PWR_31',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\45.png" id="PWR_45" data-flag="@X" onclick="openSidebar('PWR_45',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\60.png" id="PWR_60" data-flag="@X" onclick="openSidebar('PWR_60',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\2.png" id="PWR_2" data-flag="@X" onclick="openSidebar('PWR_2',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\23.png" id="PWR_23" data-flag="@X" onclick="openSidebar('PWR_23',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\32.png" id="PWR_32" data-flag="@X" onclick="openSidebar('PWR_32',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\46.png" id="PWR_46" data-flag="@X" onclick="openSidebar('PWR_46',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\61.png" id="PWR_61" data-flag="@X" onclick="openSidebar('PWR_61',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\6.png" id="PWR_6" data-flag="@X" onclick="openSidebar('PWR_6',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\24.png" id="PWR_24" data-flag="@X" onclick="openSidebar('PWR_24',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\33.png" id="PWR_33" data-flag="@X" onclick="openSidebar('PWR_33',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\47.png" id="PWR_47" data-flag="@X" onclick="openSidebar('PWR_47',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\62.png" id="PWR_62" data-flag="@X" onclick="openSidebar('PWR_62',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\8.png" id="PWR_8" data-flag="@X" onclick="openSidebar('PWR_8',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\25.png" id="PWR_25" data-flag="@X" onclick="openSidebar('PWR_25',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\34.png" id="PWR_34" data-flag="@X" onclick="openSidebar('PWR_34',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\48.png" id="PWR_48" data-flag="@X" onclick="openSidebar('PWR_48',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\63.png" id="PWR_63" data-flag="@X" onclick="openSidebar('PWR_63',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\12.png" id="PWR_12" data-flag="@X" onclick="openSidebar('PWR_12',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\26.png" id="PWR_26" data-flag="@X" onclick="openSidebar('PWR_26',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\35.png" id="PWR_35" data-flag="@X" onclick="openSidebar('PWR_35',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\49.png" id="PWR_49" data-flag="@X" onclick="openSidebar('PWR_49',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\64.png" id="PWR_64" data-flag="@X" onclick="openSidebar('PWR_64',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\1.png" id="PWR_1" data-flag="@X" onclick="openSidebar('PWR_1',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\28.png" id="PWR_28" data-flag="@X" onclick="openSidebar('PWR_28',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\36.png" id="PWR_36" data-flag="@X" onclick="openSidebar('PWR_36',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\50.png" id="PWR_50" data-flag="@X" onclick="openSidebar('PWR_50',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\65.png" id="PWR_65" data-flag="@X" onclick="openSidebar('PWR_65',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\15.png" id="PWR_15" data-flag="@X" onclick="openSidebar('PWR_15',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\29.png" id="PWR_29" data-flag="@X" onclick="openSidebar('PWR_29',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\37.png" id="PWR_37" data-flag="@X" onclick="openSidebar('PWR_37',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\51.png" id="PWR_51" data-flag="@X" onclick="openSidebar('PWR_51',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\66.png" id="PWR_66" data-flag="@X" onclick="openSidebar('PWR_66',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\7.png" id="PWR_7" data-flag="@X" onclick="openSidebar('PWR_7',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\19.png" id="PWR_19" data-flag="@X" onclick="openSidebar('PWR_19',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\38.png" id="PWR_38" data-flag="@X" onclick="openSidebar('PWR_38',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\52.png" id="PWR_52" data-flag="@X" onclick="openSidebar('PWR_52',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\67.png" id="PWR_67" data-flag="@X" onclick="openSidebar('PWR_67',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\14.png" id="PWR_14" data-flag="@X" onclick="openSidebar('PWR_14',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\20.png" id="PWR_20" data-flag="@X" onclick="openSidebar('PWR_20',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\39.png" id="PWR_39" data-flag="@X" onclick="openSidebar('PWR_39',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\53.png" id="PWR_53" data-flag="@X" onclick="openSidebar('PWR_53',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\68.png" id="PWR_68" data-flag="@X" onclick="openSidebar('PWR_68',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\4.png" id="PWR_4" data-flag="@X" onclick="openSidebar('PWR_4',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\27.png" id="PWR_27" data-flag="@X" onclick="openSidebar('PWR_27',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\40.png" id="PWR_40" data-flag="@X" onclick="openSidebar('PWR_40',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\54.png" id="PWR_54" data-flag="@X" onclick="openSidebar('PWR_54',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\69.png" id="PWR_69" data-flag="@X" onclick="openSidebar('PWR_69',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\3.png" id="PWR_3" data-flag="@X" onclick="openSidebar('PWR_3',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\21.png" id="PWR_21" data-flag="@X" onclick="openSidebar('PWR_21',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\41.png" id="PWR_41" data-flag="@X" onclick="openSidebar('PWR_41',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\55.png" id="PWR_55" data-flag="@X" onclick="openSidebar('PWR_55',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\71.png" id="PWR_71" data-flag="@X" onclick="openSidebar('PWR_71',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\10.png" id="PWR_10" data-flag="@X" onclick="openSidebar('PWR_10',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\254.png" id="PWR_254" data-flag="@X" onclick="openSidebar('PWR_254',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\42.png" id="PWR_42" data-flag="@X" onclick="openSidebar('PWR_42',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\56.png" id="PWR_56" data-flag="@X" onclick="openSidebar('PWR_56',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\72.png" id="PWR_72" data-flag="@X" onclick="openSidebar('PWR_72',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\9.png" id="PWR_9" data-flag="@X" onclick="openSidebar('PWR_9',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\16.png" id="PWR_16" data-flag="@X" onclick="openSidebar('PWR_16',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\43.png" id="PWR_43" data-flag="@X" onclick="openSidebar('PWR_43',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\57.png" id="PWR_57" data-flag="@X" onclick="openSidebar('PWR_57',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\70.png" id="PWR_70" data-flag="@X" onclick="openSidebar('PWR_70',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\18.png" id="PWR_18" data-flag="@X" onclick="openSidebar('PWR_18',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\30.png" id="PWR_30" data-flag="@X" onclick="openSidebar('PWR_30',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\58.png" id="PWR_58" data-flag="@X" onclick="openSidebar('PWR_58',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\252.png" id="PWR_252" data-flag="@X" onclick="openSidebar('PWR_252',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\177.png" id="PWR_177" data-flag="@X" onclick="openSidebar('PWR_177',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\237.png" id="PWR_237" data-flag="@X" onclick="openSidebar('PWR_237',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\178.png" id="PWR_178" data-flag="@X" onclick="openSidebar('PWR_178',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\179.png" id="PWR_179" data-flag="@X" onclick="openSidebar('PWR_179',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\180.png" id="PWR_180" data-flag="@X" onclick="openSidebar('PWR_180',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\236.png" id="PWR_236" data-flag="@X" onclick="openSidebar('PWR_236',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\168.png" id="PWR_168" data-flag="@X" onclick="openSidebar('PWR_168',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\169.png" id="PWR_169" data-flag="@X" onclick="openSidebar('PWR_169',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\239.png" id="PWR_239" data-flag="@X" onclick="openSidebar('PWR_239',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\171.png" id="PWR_171" data-flag="@X" onclick="openSidebar('PWR_171',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\253.png" id="PWR_253" data-flag="@X" onclick="openSidebar('PWR_253',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\238.png" id="PWR_238" data-flag="@X" onclick="openSidebar('PWR_238',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\170.png" id="PWR_170" data-flag="@X" onclick="openSidebar('PWR_170',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\240.png" id="PWR_240" data-flag="@X" onclick="openSidebar('PWR_240',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\181.png" id="PWR_181" data-flag="@X" onclick="openSidebar('PWR_181',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\182.png" id="PWR_182" data-flag="@X" onclick="openSidebar('PWR_182',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\183.png" id="PWR_183" data-flag="@X" onclick="openSidebar('PWR_183',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\184.png" id="PWR_184" data-flag="@X" onclick="openSidebar('PWR_184',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\185.png" id="PWR_185" data-flag="@X" onclick="openSidebar('PWR_185',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\172.png" id="PWR_172" data-flag="@X" onclick="openSidebar('PWR_172',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\173.png" id="PWR_173" data-flag="@X" onclick="openSidebar('PWR_173',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\174.png" id="PWR_174" data-flag="@X" onclick="openSidebar('PWR_174',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\175.png" id="PWR_175" data-flag="@X" onclick="openSidebar('PWR_175',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\176.png" id="PWR_176" data-flag="@X" onclick="openSidebar('PWR_176',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\241.png" id="PWR_241" data-flag="@X" onclick="openSidebar('PWR_241',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\242.png" id="PWR_242" data-flag="@X" onclick="openSidebar('PWR_242',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\243.png" id="PWR_243" data-flag="@X" onclick="openSidebar('PWR_243',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\244.png" id="PWR_244" data-flag="@X" onclick="openSidebar('PWR_244',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\245.png" id="PWR_245" data-flag="@X" onclick="openSidebar('PWR_245',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\211.png" id="PWR_211" data-flag="@X" onclick="openSidebar('PWR_211',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\212.png" id="PWR_212" data-flag="@X" onclick="openSidebar('PWR_212',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\213.png" id="PWR_213" data-flag="@X" onclick="openSidebar('PWR_213',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\214.png" id="PWR_214" data-flag="@X" onclick="openSidebar('PWR_214',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\215.png" id="PWR_215" data-flag="@X" onclick="openSidebar('PWR_215',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\203.png" id="PWR_203" data-flag="@X" onclick="openSidebar('PWR_203',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\204.png" id="PWR_204" data-flag="@X" onclick="openSidebar('PWR_204',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\205.png" id="PWR_205" data-flag="@X" onclick="openSidebar('PWR_205',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\206.png" id="PWR_206" data-flag="@X" onclick="openSidebar('PWR_206',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\207.png" id="PWR_207" data-flag="@X" onclick="openSidebar('PWR_207',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\208.png" id="PWR_208" data-flag="@X" onclick="openSidebar('PWR_208',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\209.png" id="PWR_209" data-flag="@X" onclick="openSidebar('PWR_209',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\210.png" id="PWR_210" data-flag="@X" onclick="openSidebar('PWR_210',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\189.png" id="PWR_189" data-flag="@X" onclick="openSidebar('PWR_189',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\190.png" id="PWR_190" data-flag="@X" onclick="openSidebar('PWR_190',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\191.png" id="PWR_191" data-flag="@X" onclick="openSidebar('PWR_191',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\192.png" id="PWR_192" data-flag="@X" onclick="openSidebar('PWR_192',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\249.png" id="PWR_249" data-flag="@X" onclick="openSidebar('PWR_249',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\193.png" id="PWR_193" data-flag="@X" onclick="openSidebar('PWR_193',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\250.png" id="PWR_250" data-flag="@X" onclick="openSidebar('PWR_250',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\256.png" id="PWR_256" data-flag="@X" onclick="openSidebar('PWR_256',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\186.png" id="PWR_186" data-flag="@X" onclick="openSidebar('PWR_186',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\187.png" id="PWR_187" data-flag="@X" onclick="openSidebar('PWR_187',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\246.png" id="PWR_246" data-flag="@X" onclick="openSidebar('PWR_246',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\247.png" id="PWR_247" data-flag="@X" onclick="openSidebar('PWR_247',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\248.png" id="PWR_248" data-flag="@X" onclick="openSidebar('PWR_248',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\188.png" id="PWR_188" data-flag="@X" onclick="openSidebar('PWR_188',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\266.png" id="PWR_266" data-flag="@X" onclick="openSidebar('PWR_266',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\261.png" id="PWR_261" data-flag="@X" onclick="openSidebar('PWR_261',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\257.png" id="PWR_257" data-flag="@X" onclick="openSidebar('PWR_257',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\264.png" id="PWR_264" data-flag="@X" onclick="openSidebar('PWR_264',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\259.png" id="PWR_259" data-flag="@X" onclick="openSidebar('PWR_259',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\258.png" id="PWR_258" data-flag="@X" onclick="openSidebar('PWR_258',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\260.png" id="PWR_260" data-flag="@X" onclick="openSidebar('PWR_260',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\263.png" id="PWR_263" data-flag="@X" onclick="openSidebar('PWR_263',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\262.png" id="PWR_262" data-flag="@X" onclick="openSidebar('PWR_262',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\265.png" id="PWR_265" data-flag="@X" onclick="openSidebar('PWR_265',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\202.png" id="PWR_202" data-flag="@X" onclick="openSidebar('PWR_202',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\195.png" id="PWR_195" data-flag="@X" onclick="openSidebar('PWR_195',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\196.png" id="PWR_196" data-flag="@X" onclick="openSidebar('PWR_196',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\197.png" id="PWR_197" data-flag="@X" onclick="openSidebar('PWR_197',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\198.png" id="PWR_198" data-flag="@X" onclick="openSidebar('PWR_198',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\199.png" id="PWR_199" data-flag="@X" onclick="openSidebar('PWR_199',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\200.png" id="PWR_200" data-flag="@X" onclick="openSidebar('PWR_200',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\201.png" id="PWR_201" data-flag="@X" onclick="openSidebar('PWR_201',false)"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\194.png" id="PWR_194" data-flag="@X" onclick="openSidebar('PWR_194',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img loading="lazy" alt="sets\PWR-files\img\270.png" id="PWR_270" data-flag="@X" onclick="openSidebar('PWR_270',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\e.png" id="PWR_e" data-flag="@E" onclick="openSidebar('PWR_e',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+				<div class="container"><img loading="lazy" alt="img\er.png" id="PWR_er" data-flag="@E" onclick="openSidebar('PWR_er',false)"></div>
+	</div>
+	</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch(rootPath + '/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch(rootPath + '/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+				let all_tags = new Set();
+				card_list_arrayified.forEach(card => {
+					if (card.notes) {
+						const tagMatches = card.notes.matchAll(/!tag(?:<\w+>)?\s+([^\s\n\b]+)/g);
+						for (const match of tagMatches) {
+							all_tags.add(match[1].toLowerCase());
+						}
+					}
+				});
+
+				const searchInput = document.getElementById("search");
+				const tagDropdown = document.getElementById("tag-dropdown");
+
+				// Create a mirror element for position calculation
+				const mirror = document.createElement("div");
+				Object.assign(mirror.style, {
+					position: "absolute",
+					visibility: "hidden",
+					whiteSpace: "pre",
+					font: getComputedStyle(searchInput).font,
+					padding: "0", // No padding for pure text measurement
+					border: "none",
+					boxSizing: "content-box"
+				});
+				document.body.appendChild(mirror);
+
+				if (searchInput && tagDropdown) {
+					tagDropdown.style.width = "auto";
+					tagDropdown.style.minWidth = "75px";
+					tagDropdown.style.maxWidth = "300px";
+					tagDropdown.style.maxHeight = "200px";
+					tagDropdown.style.overflowY = "auto";
+
+					const updateDropdown = function() {
+						const value = searchInput.value;
+						const cursorPosition = searchInput.selectionStart;
+						
+						// Find the tag: prefix immediately preceding the cursor
+						const lastTagIndex = value.substring(0, cursorPosition).lastIndexOf("tag:");
+						
+						if (lastTagIndex !== -1) {
+							const queryStart = lastTagIndex + 4;
+							const query = value.substring(queryStart, cursorPosition);
+							
+							if (!query.includes(" ")) {
+								const filteredTags = Array.from(all_tags).filter(tag => tag.toLowerCase().startsWith(query.toLowerCase())).sort();
+								if (filteredTags.length > 0) {
+									tagDropdown.innerHTML = "";
+									filteredTags.forEach(tag => {
+										const div = document.createElement("div");
+										div.innerText = tag;
+										div.style.padding = "5px 10px";
+										div.style.cursor = "pointer";
+										div.style.whiteSpace = "nowrap";
+										div.onmouseover = () => div.style.background = "#f0f0f0";
+										div.onmouseout = () => div.style.background = "white";
+										div.onclick = () => {
+											const newValue = value.substring(0, queryStart) + tag + " " + value.substring(cursorPosition);
+											searchInput.value = newValue;
+											tagDropdown.style.display = "none";
+											searchInput.focus();
+											const newCursorPos = queryStart + tag.length + 1;
+											searchInput.setSelectionRange(newCursorPos, newCursorPos);
+										};
+										tagDropdown.appendChild(div);
+									});
+
+									// Calculate position
+									mirror.textContent = value.substring(0, lastTagIndex + 4);
+									const textWidth = mirror.getBoundingClientRect().width;
+									const inputPaddingLeft = parseFloat(getComputedStyle(searchInput).paddingLeft) || 0;
+									
+									tagDropdown.style.left = Math.min(textWidth + inputPaddingLeft, searchInput.offsetWidth - tagDropdown.offsetWidth) + "px";
+									tagDropdown.style.display = "block";
+									return;
+								}
+							}
+						}
+						tagDropdown.style.display = "none";
+					};
+
+					searchInput.addEventListener("input", updateDropdown);
+					searchInput.addEventListener("click", updateDropdown);
+					searchInput.addEventListener("keyup", updateDropdown);
+
+					document.addEventListener("click", function(e) {
+						if (e.target !== searchInput && e.target !== tagDropdown) {
+							tagDropdown.style.display = "none";
+						}
+					});
+				}
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = rootPath + '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = rootPath + '/' + img.alt;
+				if (img.dataset.alt_src) {
+					img.dataset.alt_src = rootPath + '/' + img.dataset.alt_src;
+				}
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		const img = document.getElementById(num);
+		const seconds = 0.2;
+		const rotated_img = document.getElementById('sidebar_h_img');
+
+        img.style.transition = seconds.toString() + "s";
+        img.style.transform = "rotateY(90deg)";
+
+        if (num == 'sidebar_img')
+		{
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal)
+            {
+            	rotated_img.style.transition = seconds.toString() + "s";
+           		rotated_img.style.transform = "rotateY(90deg) rotate(90deg)";
+
+           		if (rotated_img.style.opacity != "0") {
+		            setTimeout(() => {
+		                rotated_img.style.opacity = "0";
+		                img.style.filter = "none";
+		            }, (seconds / 2) * 1000);
+		        }
+		        else {
+		        	setTimeout(() => {
+		                rotated_img.style.opacity = "1";
+		                img.style.filter = "blur(2px) brightness(0.7)";
+		            }, (seconds / 2) * 1000);
+		        }
+            }
+		}
+
+         setTimeout(function() {
+            tmp = document.getElementById(num).src;
+			document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+			document.getElementById(num).dataset.alt_src = tmp;
+
+            img.style.transition = seconds.toString() + "s";
+            img.style.transform = "rotateY(0deg)";
+
+            if (horizontal)
+            {
+            	rotated_img.style.transition = seconds.toString() + "s";
+           		rotated_img.style.transform = "rotateY(0deg) rotate(90deg)";
+            }
+        }, seconds * 1000);
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.style.transition = "none";
+		rotated_img.style.transition = "none";
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.opacity = "1";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.opacity = "0";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		dropdown.style.gridTemplateColumns = "repeat(3, 1fr)";
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		dropdown.style.gridTemplateColumns = "1fr";
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL(rootPath + '/search', window.location.href.split('?')[0].split('/').slice(0, -1).join('/') + '/');
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url.pathname + url.search;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL(rootPath + '/card', window.location.href.split('?')[0].split('/').slice(0, -1).join('/') + '/');
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url.pathname + url.search;
+			}
+	</script>
+</body>
+</html>
