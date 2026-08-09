@@ -47,7 +47,7 @@
             "alias": "",
             "position": "1",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Juice Bar Proprietor",
@@ -68,7 +68,7 @@
             "alias": "",
             "position": "2",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Timely Butler",
@@ -89,7 +89,7 @@
             "alias": "",
             "position": "3",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Time Force Officer",
@@ -110,7 +110,7 @@
             "alias": "",
             "position": "4",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Buffoons No More",
@@ -131,7 +131,7 @@
             "alias": "",
             "position": "5",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Martial Arts Instructor",
@@ -152,7 +152,7 @@
             "alias": "",
             "position": "6",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Silver Guardian Commander",
@@ -173,7 +173,7 @@
             "alias": "",
             "position": "7",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Mobile Armored Vehicle",
@@ -194,7 +194,7 @@
             "alias": "",
             "position": "8",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Wise Mentor",
@@ -215,7 +215,7 @@
             "alias": "",
             "position": "9",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Waspicable",
@@ -236,7 +236,7 @@
             "alias": "",
             "position": "10",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Hovertek Cycle",
@@ -257,7 +257,7 @@
             "alias": "",
             "position": "11",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Power Down",
@@ -278,7 +278,7 @@
             "alias": "",
             "position": "12",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Data Card",
@@ -299,7 +299,7 @@
             "alias": "",
             "position": "13",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "That all you've got!",
@@ -320,7 +320,7 @@
             "alias": "",
             "position": "14",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Save the Day",
@@ -341,7 +341,7 @@
             "alias": "",
             "position": "15",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Upgrade Inventor",
@@ -362,7 +362,7 @@
             "alias": "",
             "position": "16",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CU03",
@@ -404,14 +404,14 @@
             "alias": "",
             "position": "18",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "GU Modified / UR Gattai",
             "color": "U",
             "rarity": "common",
             "type": "Artifact \u2014 Vehicle",
-            "number": 63,
+            "number": 62,
             "color_identity": "U",
             "cost": "{3}{U}",
             "rules_text": "When this vehicle enters, put a +1/+1 counter on target creature or vehicle. It gains flying until end of turn.\nCrew 3 [i](Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)[/i]",
@@ -425,14 +425,14 @@
             "alias": "",
             "position": "19",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Sat Bot",
             "color": "U",
             "rarity": "common",
             "type": "Artifact Creature \u2014 Robot Villian",
-            "number": 72,
+            "number": 71,
             "color_identity": "U",
             "cost": "{3}{U}",
             "rules_text": "This creature can't be blocked\nSat Bot gets +1/+0 for each artifact you control",
@@ -467,14 +467,14 @@
             "alias": "",
             "position": "21",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
-            "card_name": "CU08",
+            "card_name": "Some sort of Motorcycle?",
             "color": "U",
             "rarity": "common",
             "type": "Artifact \u2014 Vehicle",
-            "number": 56,
+            "number": 73,
             "color_identity": "U",
             "cost": "{5}{U}",
             "rules_text": "Flying\nWhen this vehicle attacks, draw a card.\nCrew 2 [i](Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)[/i]\nBasic landcycling {2} [i]({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)[/i]",
@@ -488,14 +488,14 @@
             "alias": "",
             "position": "22",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CU09",
             "color": "U",
             "rarity": "common",
             "type": "",
-            "number": 57,
+            "number": 56,
             "color_identity": "U",
             "cost": "",
             "rules_text": "Protective instant",
@@ -516,7 +516,7 @@
             "color": "U",
             "rarity": "common",
             "type": "",
-            "number": 58,
+            "number": 57,
             "color_identity": "U",
             "cost": "",
             "rules_text": "Counterspell",
@@ -537,7 +537,7 @@
             "color": "U",
             "rarity": "common",
             "type": "",
-            "number": 59,
+            "number": 58,
             "color_identity": "U",
             "cost": "",
             "rules_text": "Cantrip",
@@ -558,7 +558,7 @@
             "color": "U",
             "rarity": "common",
             "type": "Sorccery",
-            "number": 60,
+            "number": 59,
             "color_identity": "U",
             "cost": "{1}{U}",
             "rules_text": "Teamwork 3 [i](As an additional cost to cast this spell you may tap any number of creatures you control with total power 3 or more)[/i]\nDraw two cards. Then discard a card unless this spell's teamwork cost was payed",
@@ -572,14 +572,14 @@
             "alias": "",
             "position": "26",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Sever from the Grid",
             "color": "U",
             "rarity": "common",
             "type": "Enchantment \u2014 Aura",
-            "number": 73,
+            "number": 72,
             "color_identity": "U",
             "cost": "{U}",
             "rules_text": "Enchant Creature\nEnchanted creature loses all abilities and is a Citizen creature with base power and toughness 0/2 in addition to its other types\nAs long as enchanted creature is face down, it can't be turned face up",
@@ -593,14 +593,14 @@
             "alias": "",
             "position": "27",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CU14",
             "color": "U",
             "rarity": "common",
             "type": "",
-            "number": 61,
+            "number": 60,
             "color_identity": "U",
             "cost": "",
             "rules_text": "Removal bounce or Top/bottom [i](opponents choice)[/i] of library",
@@ -621,7 +621,7 @@
             "color": "U",
             "rarity": "common",
             "type": "",
-            "number": 62,
+            "number": 61,
             "color_identity": "U",
             "cost": "",
             "rules_text": "Modal spell",
@@ -656,7 +656,7 @@
             "alias": "",
             "position": "30",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CB03",
@@ -1496,7 +1496,7 @@
             "alias": "",
             "position": "70",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CG14",
@@ -2378,7 +2378,7 @@
             "alias": "",
             "position": "112",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "UR15",
@@ -2784,7 +2784,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 66,
+            "number": 65,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -2805,7 +2805,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 67,
+            "number": 66,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -2826,7 +2826,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 68,
+            "number": 67,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -2847,7 +2847,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 69,
+            "number": 68,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -2868,7 +2868,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 70,
+            "number": 69,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -2889,7 +2889,7 @@
             "color": "U",
             "rarity": "rare",
             "type": "",
-            "number": 71,
+            "number": 70,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -3372,7 +3372,7 @@
             "color": "U",
             "rarity": "mythic",
             "type": "",
-            "number": 65,
+            "number": 64,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -3554,7 +3554,7 @@
             "alias": "",
             "position": "168",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "UM01",
@@ -3596,7 +3596,7 @@
             "alias": "",
             "position": "170",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "UM01",
@@ -3764,7 +3764,7 @@
             "alias": "",
             "position": "178",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "RM01",
@@ -3812,7 +3812,7 @@
             "card_name": "Countdown to Destruction",
             "color": "WB",
             "rarity": "rare",
-            "type": "Creature",
+            "type": "Enchan",
             "number": 213,
             "color_identity": "WB",
             "cost": "{2}{W}{B}",
@@ -3848,7 +3848,7 @@
             "alias": "",
             "position": "182",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Lothor, Abyss's Opener",
@@ -3869,7 +3869,7 @@
             "alias": "",
             "position": "183",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "RM01",
@@ -3911,7 +3911,7 @@
             "alias": "",
             "position": "185",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CA01",
@@ -3974,7 +3974,7 @@
             "alias": "",
             "position": "188",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "UA01",
@@ -4086,7 +4086,7 @@
             "color": "",
             "rarity": "common",
             "type": "Land",
-            "number": 256,
+            "number": 257,
             "color_identity": "C",
             "cost": "",
             "rules_text": "",
@@ -4943,27 +4943,6 @@
             "notes": ""
         },
         {
-            "card_name": "Skeleton Info",
-            "color": "",
-            "rarity": "common",
-            "type": "",
-            "number": 1,
-            "color_identity": "C",
-            "cost": "",
-            "rules_text": "This skeleton is based on the article by Mark Rosewater. \n\nRead about it more here:\nhttps://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters",
-            "flavor_text": "[i][/i]",
-            "pt": "",
-            "special_text": "",
-            "shape": "token",
-            "set": "PWR",
-            "loyalty": "",
-            "artist": "",
-            "alias": "",
-            "position": "235",
-            "rotated": false,
-            "notes": "This skeleton is based on the article by Mark Rosewater. \n\nRead about it more here:\nhttps://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters"
-        },
-        {
             "card_name": "UM01",
             "color": "WU",
             "rarity": "rare",
@@ -4980,7 +4959,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "236",
+            "position": "235",
             "rotated": false,
             "notes": ""
         },
@@ -5001,9 +4980,9 @@
             "loyalty": "",
             "artist": "Mighty Morphin Power Rangers",
             "alias": "",
-            "position": "237",
+            "position": "236",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "UM02",
@@ -5022,7 +5001,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "238",
+            "position": "237",
             "rotated": false,
             "notes": ""
         },
@@ -5043,7 +5022,7 @@
             "loyalty": "",
             "artist": "Power Rangers Mystic Force",
             "alias": "",
-            "position": "239",
+            "position": "238",
             "rotated": false,
             "notes": ""
         },
@@ -5064,7 +5043,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "240",
+            "position": "239",
             "rotated": false,
             "notes": ""
         },
@@ -5085,7 +5064,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "241",
+            "position": "240",
             "rotated": false,
             "notes": ""
         },
@@ -5106,7 +5085,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "242",
+            "position": "241",
             "rotated": false,
             "notes": ""
         },
@@ -5127,7 +5106,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "243",
+            "position": "242",
             "rotated": false,
             "notes": ""
         },
@@ -5148,7 +5127,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "244",
+            "position": "243",
             "rotated": false,
             "notes": ""
         },
@@ -5169,7 +5148,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "245",
+            "position": "244",
             "rotated": false,
             "notes": ""
         },
@@ -5190,7 +5169,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "246",
+            "position": "245",
             "rotated": false,
             "notes": ""
         },
@@ -5211,7 +5190,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "247",
+            "position": "246",
             "rotated": false,
             "notes": ""
         },
@@ -5232,7 +5211,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "248",
+            "position": "247",
             "rotated": false,
             "notes": ""
         },
@@ -5253,7 +5232,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "249",
+            "position": "248",
             "rotated": false,
             "notes": ""
         },
@@ -5274,7 +5253,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "250",
+            "position": "249",
             "rotated": false,
             "notes": ""
         },
@@ -5295,9 +5274,9 @@
             "loyalty": "",
             "artist": "Mighty Morphin Power Rangers",
             "alias": "",
-            "position": "251",
+            "position": "250",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Pumpkin Rapper",
@@ -5316,9 +5295,9 @@
             "loyalty": "",
             "artist": "My Shiny Toy Robots",
             "alias": "",
-            "position": "252",
+            "position": "251",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Venjix, K's Great Mistake",
@@ -5337,9 +5316,9 @@
             "loyalty": "",
             "artist": "Power Rangers RPM",
             "alias": "",
-            "position": "253",
+            "position": "252",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Technobabling Inventor",
@@ -5358,9 +5337,9 @@
             "loyalty": "",
             "artist": "Mighty Morphin Power Rangers",
             "alias": "",
-            "position": "254",
+            "position": "253",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Troy, Supermega Red",
@@ -5379,9 +5358,9 @@
             "loyalty": "",
             "artist": "Super Mega Force",
             "alias": "",
-            "position": "255",
+            "position": "254",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "",
@@ -5400,7 +5379,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "256",
+            "position": "255",
             "rotated": false,
             "notes": ""
         },
@@ -5421,7 +5400,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "257",
+            "position": "256",
             "rotated": false,
             "notes": ""
         },
@@ -5442,7 +5421,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "258",
+            "position": "257",
             "rotated": false,
             "notes": ""
         },
@@ -5463,7 +5442,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "259",
+            "position": "258",
             "rotated": false,
             "notes": ""
         },
@@ -5484,7 +5463,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "260",
+            "position": "259",
             "rotated": false,
             "notes": ""
         },
@@ -5505,7 +5484,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "261",
+            "position": "260",
             "rotated": false,
             "notes": ""
         },
@@ -5526,7 +5505,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "262",
+            "position": "261",
             "rotated": false,
             "notes": ""
         },
@@ -5547,16 +5526,16 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "263",
+            "position": "262",
             "rotated": false,
             "notes": ""
         },
         {
-            "card_name": "Fanastical Forest",
+            "card_name": "Briarwood Forest",
             "color": "",
             "rarity": "common",
             "type": "Land",
-            "number": 257,
+            "number": 256,
             "color_identity": "RG",
             "cost": "",
             "rules_text": "This land enters tapped\n{T}: Add {R} or {G}\nCycling {R}{G} [i]({R}{G}, Discard this card: Draw a card.)[/i]",
@@ -5568,9 +5547,9 @@
             "loyalty": "",
             "artist": "Power Rangers Mystic Force",
             "alias": "",
-            "position": "264",
+            "position": "263",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "GU land",
@@ -5589,7 +5568,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "265",
+            "position": "264",
             "rotated": false,
             "notes": ""
         },
@@ -5610,7 +5589,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "266",
+            "position": "265",
             "rotated": false,
             "notes": ""
         },
@@ -5631,9 +5610,9 @@
             "loyalty": "",
             "artist": "Power Rangers RPM",
             "alias": "",
-            "position": "267",
+            "position": "266",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Zordon, Universe's Protector",
@@ -5652,16 +5631,16 @@
             "loyalty": "",
             "artist": "MMPR",
             "alias": "",
-            "position": "268",
+            "position": "267",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "MU01",
             "color": "U",
             "rarity": "mythic",
             "type": "",
-            "number": 64,
+            "number": 63,
             "color_identity": "U",
             "cost": "",
             "rules_text": "",
@@ -5673,7 +5652,7 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "269",
+            "position": "268",
             "rotated": false,
             "notes": ""
         },
@@ -5682,7 +5661,7 @@
             "color": "",
             "rarity": "common",
             "type": "Creature",
-            "number": 2,
+            "number": 1,
             "color_identity": "C",
             "cost": "",
             "rules_text": "[i]You can cover a face down creature with this reminder card. A face down creature that was cast with Mighty Morph or demorphed has Nimble. [i](That creature can't be blocked by creatures with power 3 or greater)[/i][/i]",
@@ -5694,9 +5673,9 @@
             "loyalty": "",
             "artist": "Dino Thunder",
             "alias": "",
-            "position": "270",
+            "position": "269",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "Time Force Megazord",
@@ -5715,9 +5694,9 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "271",
+            "position": "270",
             "rotated": false,
-            "notes": ""
+            "notes": "!tag [EXISTS]"
         },
         {
             "card_name": "CU01",
@@ -5736,10 +5715,10 @@
             "loyalty": "",
             "artist": "",
             "alias": "",
-            "position": "272",
+            "position": "271",
             "rotated": false,
             "notes": ""
         }
     ],
-    "version": 1
+    "version": 2
 }

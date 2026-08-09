@@ -1,4 +1,152 @@
-﻿VERSION 1 CHANGELOG
+﻿VERSION 2 CHANGELOG
+====================
+
+Some sort of Motorcycle? added.
+Briarwood Forest added.
+
+CU08 removed.
+Skeleton Info removed.
+Fanastical Forest removed.
+
+Robotic Assistant
+
+Juice Bar Proprietor
+
+Timely Butler
+
+Time Force Officer
+
+Buffoons No More
+
+Martial Arts Instructor
+
+Silver Guardian Commander
+
+Mobile Armored Vehicle
+
+Wise Mentor
+
+Waspicable
+
+Hovertek Cycle
+
+Power Down
+
+Data Card
+
+That all you've got!
+
+Save the Day
+
+Upgrade Inventor
+
+Wannabe Reporter (and co.)
+
+GU Modified / UR Gattai
+
+The Squid Ink Inc. Squidrill™
+
+CU12
+
+Sever from the Grid
+
+Putty Patrollers
+
+Giant Growth
+
+Evil Pizzas
+
+Dr. K
+
+Preston, Ninja Steel Blue
+
+Serpentera, World Eater
+
+Countdown to Destruction
+type: Creature => Enchan
+
+Astro Megaship
+
+Lothor, Abyss's Opener
+
+Bajillia Naire, CEO
+
+Overdrive Tracker
+
+UM01
+
+Magical Staff
+
+UM02
+
+??Chip, Yellow Mystic Ranger
+
+UM02
+
+UM02
+
+UM02
+
+UM02
+
+UM02
+
+UM02
+
+CA03
+
+CA04
+
+CA05
+
+UA05
+
+UA07
+
+Joint Finisher
+
+Pumpkin Rapper
+
+Venjix, K's Great Mistake
+
+Technobabling Inventor
+
+Troy, Supermega Red
+
+
+
+BR Land
+
+WB land
+
+GW land
+
+UR land
+
+UB LAND
+
+RW land
+
+BG land
+
+GU land
+
+Newtech City
+
+Flynn, Ranger Series Blue
+
+Zordon, Universe's Protector
+
+MU01
+
+Totally Average Civilian
+
+Time Force Megazord
+
+CU01
+
+
+VERSION 1 CHANGELOG
 ====================
 
 First version published.

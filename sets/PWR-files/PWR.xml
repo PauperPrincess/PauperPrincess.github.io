@@ -341,7 +341,7 @@ Choose one. If this spell&apos;s teamwork cost was paid, choose two instead:
 			<name>GU Modified / UR Gattai</name>
 			<text>When this vehicle enters, put a +1/+1 counter on target creature or vehicle. It gains flying until end of turn.
 Crew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/19.png" num="63">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/19.png" num="62">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -359,7 +359,7 @@ Crew 3 (Tap any number of creatures you control with total power 3 or more: This
 			<name>Sat Bot</name>
 			<text>This creature can&apos;t be blocked
 Sat Bot gets +1/+0 for each artifact you control</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/20.png" num="72">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/20.png" num="71">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -392,12 +392,12 @@ Crew 2 (Tap any number of creatures you control with total power 2 or more: This
 			<tablerow>1</tablerow>
 		</card>
 		<card>
-			<name>CU08</name>
+			<name>Some sort of Motorcycle?</name>
 			<text>Flying
 When this vehicle attacks, draw a card.
 Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
 Basic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/22.png" num="56">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/22.png" num="73">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -414,7 +414,7 @@ Basic landcycling {2} ({2}, Discard this card: Search your library for a basic l
 		<card>
 			<name>CU09</name>
 			<text>Protective instant</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/23.png" num="57">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/23.png" num="56">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -430,7 +430,7 @@ Basic landcycling {2} ({2}, Discard this card: Search your library for a basic l
 		<card>
 			<name>CU10</name>
 			<text>Counterspell</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/24.png" num="58">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/24.png" num="57">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -446,7 +446,7 @@ Basic landcycling {2} ({2}, Discard this card: Search your library for a basic l
 		<card>
 			<name>CU11</name>
 			<text>Cantrip</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/25.png" num="59">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/25.png" num="58">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -463,7 +463,7 @@ Basic landcycling {2} ({2}, Discard this card: Search your library for a basic l
 			<name>CU12</name>
 			<text>Teamwork 3 (As an additional cost to cast this spell you may tap any number of creatures you control with total power 3 or more)
 Draw two cards. Then discard a card unless this spell&apos;s teamwork cost was payed</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/26.png" num="60">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/26.png" num="59">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -481,7 +481,7 @@ Draw two cards. Then discard a card unless this spell&apos;s teamwork cost was p
 			<text>Enchant Creature
 Enchanted creature loses all abilities and is a Citizen creature with base power and toughness 0/2 in addition to its other types
 As long as enchanted creature is face down, it can&apos;t be turned face up</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/27.png" num="73">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/27.png" num="72">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -497,7 +497,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>CU14</name>
 			<text>Removal bounce or Top/bottom (opponents choice) of library</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/28.png" num="61">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/28.png" num="60">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -513,7 +513,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>CU15</name>
 			<text>Modal spell</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/29.png" num="62">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/29.png" num="61">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2163,7 +2163,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU02</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/132.png" num="66">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/132.png" num="65">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2179,7 +2179,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU03</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/133.png" num="67">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/133.png" num="66">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2195,7 +2195,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU04</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/134.png" num="68">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/134.png" num="67">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2211,7 +2211,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU05</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/135.png" num="69">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/135.png" num="68">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2227,7 +2227,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU06</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/136.png" num="70">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/136.png" num="69">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2243,7 +2243,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>RU07</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/137.png" num="71">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/137.png" num="70">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2611,7 +2611,7 @@ As long as enchanted creature is face down, it can&apos;t be turned face up</tex
 		<card>
 			<name>MU02</name>
 			<text></text>
-			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/160.png" num="65">PWR</set>
+			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/160.png" num="64">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -2961,14 +2961,14 @@ III — You may Sacrifice a creature. If you do, Exile all creatures you don&apo
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
-				<type>Creature</type>
-				<maintype>Creature</maintype>
+				<type>Enchan</type>
+				<maintype>Enchan</maintype>
 				<manacost>2WB</manacost>
 				<cmc>4</cmc>
 				<colors>WB</colors>
 				<coloridentity>WB</coloridentity>
 			</prop>
-			<tablerow>2</tablerow>
+			<tablerow>1</tablerow>
 		</card>
 		<card>
 			<name>Astro Megaship</name>
@@ -3157,7 +3157,7 @@ Creatures you control cost {1} less to turn face up</text>
 		<card>
 			<name>CL01</name>
 			<text></text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/194.png" num="256">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/194.png" num="257">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3767,27 +3767,9 @@ Creatures you control cost {1} less to turn face up</text>
 			<tablerow>1</tablerow>
 		</card>
 		<card>
-			<name>Skeleton Info PWR</name>
-			<text>This skeleton is based on the article by Mark Rosewater. 
-
-Read about it more here:
-https://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/235.png" num="1">PWR</set>
-			<prop>
-				<layout>normal</layout>
-				<side>front</side>
-				<type></type>
-				<maintype></maintype>
-				<manacost></manacost>
-				<cmc>0</cmc>
-			</prop>
-			<tablerow>1</tablerow>
-			<token>1</token>
-		</card>
-		<card>
 			<name>UM01</name>
 			<text></text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/236.png" num="231">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/235.png" num="231">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3803,7 +3785,7 @@ https://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters</
 		<card>
 			<name>Magical Staff</name>
 			<text>{2}, {T}: Target non-creature artifact becomes an Villain artifact creature. If it&apos;s not a vehicle, it has base power and toughness 0/0. Put three +1/+1 counters on it</text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/237.png" num="216">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/236.png" num="216">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3819,7 +3801,7 @@ https://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters</
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/238.png" num="235">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/237.png" num="235">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3836,7 +3818,7 @@ https://magic.wizards.com/en/news/making-magic/nuts-and-bolts-16-play-boosters</
 			<name>??Chip, Yellow Mystic Ranger</name>
 			<text>Whenever you cast a spell that targets a creature, exile the top card of your library. You may play it this turn
 At the beginning of your endstep, put all cards exiled with ??Chip on the bottom of your library in a random order. He deals 1 damage to target opponent for each card put in a library this way</text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/239.png" num="210">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/238.png" num="210">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3853,7 +3835,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/240.png" num="237">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/239.png" num="237">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3869,7 +3851,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/241.png" num="238">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/240.png" num="238">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3885,7 +3867,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/242.png" num="232">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/241.png" num="232">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3901,7 +3883,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/243.png" num="233">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/242.png" num="233">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3917,7 +3899,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/244.png" num="236">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/243.png" num="236">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3933,7 +3915,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UM02</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/245.png" num="234">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/244.png" num="234">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3949,7 +3931,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>CA03</name>
 			<text></text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/246.png" num="242">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/245.png" num="242">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3963,7 +3945,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>CA04</name>
 			<text>Removal, usually expensive but can handle bombs.</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/247.png" num="243">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/246.png" num="243">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3977,7 +3959,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>CA05</name>
 			<text>Manalith +</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/248.png" num="244">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/247.png" num="244">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -3991,7 +3973,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UA05</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/249.png" num="250">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/248.png" num="250">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4005,7 +3987,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 		<card>
 			<name>UA07</name>
 			<text></text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/250.png" num="252">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/249.png" num="252">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4020,7 +4002,7 @@ At the beginning of your endstep, put all cards exiled with ??Chip on the bottom
 			<name>Joint Finisher</name>
 			<text>Teamwork 5 (As an additional cost to cast this spell you may tap any number of creatures you control with total power 5 or more)
 Finishing blow deals 5 damage to target creature, if this spell&apos;s teamwork cost was paid, it deals 5 damage to any target insted</text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/251.png" num="149">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/250.png" num="149">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4037,7 +4019,7 @@ Finishing blow deals 5 damage to target creature, if this spell&apos;s teamwork 
 			<name>Pumpkin Rapper</name>
 			<text>Trample
 Gigantify {4}{G}{G} ({4}{G}{G}, Exile this card from your graveyard as a sorcery: Create a token that&apos;s a copy of it with three +1/+1 counters on it, except it&apos;s a Giant in addition to its other types.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/252.png" num="187">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/251.png" num="187">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4055,7 +4037,7 @@ Gigantify {4}{G}{G} ({4}{G}{G}, Exile this card from your graveyard as a sorcery
 			<name>Venjix, K&apos;s Great Mistake</name>
 			<text>When Venjix dies, if it was a creature, return it to the battlefield under your control. It&apos;s an artifact (He&apos;s not a creature)
 Whenever Venjix or another artifact you control deals combat damage to a player, that player gets two poison counters. (A player with ten or more poison counters loses the game)</text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/253.png" num="239">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/252.png" num="239">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4073,7 +4055,7 @@ Whenever Venjix or another artifact you control deals combat damage to a player,
 			<name>Technobabling Inventor</name>
 			<text>{T}: Add {C}. This mana can&apos;t be spent to cast a nonartifact spell.
 Exhaust — {4}: Put a flying counter on up to one target Vehicle. (Activate each exhaust ability only once.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/254.png" num="75">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/253.png" num="75">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4091,7 +4073,7 @@ Exhaust — {4}: Put a flying counter on up to one target Vehicle. (Activate eac
 			<name>Troy, Supermega Red</name>
 			<text>As Troy enters or is turned face up, you may have him become a copy of another legendary Ranger on the battlefield, except his name is &quot;Troy, Supermega Red&quot; and he has &quot;At the beginning of combat you may turn Troy face down.&quot;
 Mighty Morph {1}{U}</text>
-			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/255.png" num="76">PWR</set>
+			<set rarity="rare" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/254.png" num="76">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4108,7 +4090,7 @@ Mighty Morph {1}{U}</text>
 		<card>
 			<name></name>
 			<text></text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/256.png" num="2">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/255.png" num="2">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4124,7 +4106,7 @@ Mighty Morph {1}{U}</text>
 			<text>This land enters tapped
 {T}: Add {B} or {R} 
 Cycling {B}{R} ({B}{R}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/257.png" num="255">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/256.png" num="255">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4141,7 +4123,7 @@ Cycling {B}{R} ({B}{R}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {W} or {B}
 Cycling {W}{B} ({W}{B}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/258.png" num="271">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/257.png" num="271">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4158,7 +4140,7 @@ Cycling {W}{B} ({W}{B}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {G} or {W}
 Cycling {G}{W} ({G}{W}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/259.png" num="259">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/258.png" num="259">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4175,7 +4157,7 @@ Cycling {G}{W} ({G}{W}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {U} or {R}
 Cycling {U}{R} ({U}{R}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/260.png" num="268">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/259.png" num="268">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4192,7 +4174,7 @@ Cycling {U}{R} ({U}{R}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {U} or {B}
 Cycling {U}{B} ({U}{B}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/261.png" num="262">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/260.png" num="262">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4209,7 +4191,7 @@ Cycling {U}{B} ({U}{B}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {R} or {W}
 Cycling {R}{W} ({R}{W}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/262.png" num="261">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/261.png" num="261">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4226,7 +4208,7 @@ Cycling {R}{W} ({R}{W}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {B} or {G}
 Cycling {B}{G} ({B}{G}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/263.png" num="254">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/262.png" num="254">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4239,11 +4221,11 @@ Cycling {B}{G} ({B}{G}, Discard this card: Draw a card.)</text>
 			<tablerow>0</tablerow>
 		</card>
 		<card>
-			<name>Fanastical Forest</name>
+			<name>Briarwood Forest</name>
 			<text>This land enters tapped
 {T}: Add {R} or {G}
 Cycling {R}{G} ({R}{G}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/264.png" num="257">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/263.png" num="256">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4260,7 +4242,7 @@ Cycling {R}{G} ({R}{G}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {G} or {U}
 Cycling {G}{U} ({G}{U}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/265.png" num="258">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/264.png" num="258">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4277,7 +4259,7 @@ Cycling {G}{U} ({G}{U}, Discard this card: Draw a card.)</text>
 			<text>This land enters tapped
 {T}: Add {W} or {U}
 Cycling {W}{U} ({W}{U}, Discard this card: Draw a card.)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/266.png" num="260">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/265.png" num="260">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4293,7 +4275,7 @@ Cycling {W}{U} ({W}{U}, Discard this card: Draw a card.)</text>
 			<name>Flynn, Ranger Series Blue</name>
 			<text>When Flynn is turned face up, each artifact you control deals 1 damage to each creature your opponents control
 Mighty Morph {3}{R}{R} (You can cast this card face down as a 2/2 creature that can&apos;t be blocked by creatures with power 3 or greater for {3}. Turn it face up at any time for {3}{R}{R}.)</text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/267.png" num="148">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/266.png" num="148">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4311,7 +4293,7 @@ Mighty Morph {3}{R}{R} (You can cast this card face down as a 2/2 creature that 
 			<name>Zordon, Universe&apos;s Protector</name>
 			<text>Defender
 When Zordon dies, Demorph all creatures your opponents control (To demorph a permanent, turn it face down. It&apos;s a 2/2 Creature with nimble.)</text>
-			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/268.png" num="53">PWR</set>
+			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/267.png" num="53">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4328,7 +4310,7 @@ When Zordon dies, Demorph all creatures your opponents control (To demorph a per
 		<card>
 			<name>MU01</name>
 			<text></text>
-			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/269.png" num="64">PWR</set>
+			<set rarity="mythic" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/268.png" num="63">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4344,7 +4326,7 @@ When Zordon dies, Demorph all creatures your opponents control (To demorph a per
 		<card>
 			<name>Totally Average Civilian PWR</name>
 			<text>You can cover a face down creature with this reminder card. A face down creature that was cast with Mighty Morph or demorphed has Nimble. (That creature can&apos;t be blocked by creatures with power 3 or greater)</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/270.png" num="2">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/269.png" num="1">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4362,7 +4344,7 @@ When Zordon dies, Demorph all creatures your opponents control (To demorph a per
 			<text>Gattai {2}{R} (You can cast this spell for it&apos;s Gattai cost. If you do, put it over target vehicle you own. they become one vehicle with combined power, toughness, name, mana cost, and abilities.)
 Time Force Megazord enters with your choice of a menace or haste counter
 Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)</text>
-			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/271.png" num="159">PWR</set>
+			<set rarity="uncommon" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/270.png" num="159">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>
@@ -4379,7 +4361,7 @@ Crew 2 (Tap any number of creatures you control with total power 2 or more: This
 		<card>
 			<name>CU01</name>
 			<text>WU/UB/RU/GU</text>
-			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/272.png" num="54">PWR</set>
+			<set rarity="common" picurl="https://PauperPrincess.github.io/sets/PWR-files/img/271.png" num="54">PWR</set>
 			<prop>
 				<layout>normal</layout>
 				<side>front</side>

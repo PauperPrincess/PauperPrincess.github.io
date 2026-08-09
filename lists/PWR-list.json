@@ -9,11 +9,11 @@
     },
     {
         "card_name": "MU01",
-        "number": 64,
+        "number": 63,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "269"
+        "position": "268"
     },
     {
         "card_name": "MB01",
@@ -45,11 +45,11 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "268"
+        "position": "267"
     },
     {
         "card_name": "MU02",
-        "number": 65,
+        "number": 64,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -89,7 +89,7 @@
     },
     {
         "card_name": "RU02",
-        "number": 66,
+        "number": 65,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -129,7 +129,7 @@
     },
     {
         "card_name": "RU03",
-        "number": 67,
+        "number": 66,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -169,7 +169,7 @@
     },
     {
         "card_name": "RU04",
-        "number": 68,
+        "number": 67,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -209,7 +209,7 @@
     },
     {
         "card_name": "RU05",
-        "number": 69,
+        "number": 68,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -249,7 +249,7 @@
     },
     {
         "card_name": "RU06",
-        "number": 70,
+        "number": 69,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -289,7 +289,7 @@
     },
     {
         "card_name": "RU07",
-        "number": 71,
+        "number": 70,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
@@ -333,7 +333,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "255"
+        "position": "254"
     },
     {
         "card_name": "RB07",
@@ -429,7 +429,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "267"
+        "position": "266"
     },
     {
         "card_name": "UG02",
@@ -469,7 +469,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "251"
+        "position": "250"
     },
     {
         "card_name": "UG03",
@@ -509,7 +509,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "271"
+        "position": "270"
     },
     {
         "card_name": "UG04",
@@ -933,7 +933,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "272"
+        "position": "271"
     },
     {
         "card_name": "UB15",
@@ -1008,12 +1008,12 @@
         "position": "11"
     },
     {
-        "card_name": "CU08",
+        "card_name": "CU09",
         "number": 56,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "22"
+        "position": "23"
     },
     {
         "card_name": "CB03",
@@ -1048,12 +1048,12 @@
         "position": "2"
     },
     {
-        "card_name": "CU09",
+        "card_name": "CU10",
         "number": 57,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "23"
+        "position": "24"
     },
     {
         "card_name": "CB04",
@@ -1088,12 +1088,12 @@
         "position": "6"
     },
     {
-        "card_name": "CU10",
+        "card_name": "CU11",
         "number": 58,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "24"
+        "position": "25"
     },
     {
         "card_name": "CB05",
@@ -1128,12 +1128,12 @@
         "position": "8"
     },
     {
-        "card_name": "CU11",
+        "card_name": "CU12",
         "number": 59,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "25"
+        "position": "26"
     },
     {
         "card_name": "CB06",
@@ -1168,12 +1168,12 @@
         "position": "12"
     },
     {
-        "card_name": "CU12",
+        "card_name": "CU14",
         "number": 60,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "26"
+        "position": "28"
     },
     {
         "card_name": "CB07",
@@ -1208,12 +1208,12 @@
         "position": "1"
     },
     {
-        "card_name": "CU14",
+        "card_name": "CU15",
         "number": 61,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "28"
+        "position": "29"
     },
     {
         "card_name": "CB08",
@@ -1248,12 +1248,12 @@
         "position": "15"
     },
     {
-        "card_name": "CU15",
+        "card_name": "GU Modified / UR Gattai",
         "number": 62,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "29"
+        "position": "19"
     },
     {
         "card_name": "CB09",
@@ -1288,12 +1288,12 @@
         "position": "7"
     },
     {
-        "card_name": "GU Modified / UR Gattai",
-        "number": 63,
+        "card_name": "Sat Bot",
+        "number": 71,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "19"
+        "position": "20"
     },
     {
         "card_name": "CB10",
@@ -1328,12 +1328,12 @@
         "position": "14"
     },
     {
-        "card_name": "Sat Bot",
+        "card_name": "Sever from the Grid",
         "number": 72,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "20"
+        "position": "27"
     },
     {
         "card_name": "CB11",
@@ -1368,12 +1368,12 @@
         "position": "4"
     },
     {
-        "card_name": "Sever from the Grid",
+        "card_name": "Some sort of Motorcycle?",
         "number": 73,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "27"
+        "position": "22"
     },
     {
         "card_name": "CB12",
@@ -1453,7 +1453,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "254"
+        "position": "253"
     },
     {
         "card_name": "CB14",
@@ -1552,7 +1552,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "252"
+        "position": "251"
     },
     {
         "card_name": "er"
@@ -1581,7 +1581,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "237"
+        "position": "236"
     },
     {
         "card_name": "Serpentera, World Eater",
@@ -1613,7 +1613,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "236"
+        "position": "235"
     },
     {
         "card_name": "Dr. K",
@@ -1637,7 +1637,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "239"
+        "position": "238"
     },
     {
         "card_name": "UM01",
@@ -1656,7 +1656,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "253"
+        "position": "252"
     },
     {
         "card_name": "UM02",
@@ -1664,7 +1664,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "238"
+        "position": "237"
     },
     {
         "card_name": "Preston, Ninja Steel Blue",
@@ -1680,7 +1680,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "240"
+        "position": "239"
     },
     {
         "card_name": "er"
@@ -1783,7 +1783,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "241"
+        "position": "240"
     },
     {
         "card_name": "UM02",
@@ -1791,7 +1791,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "242"
+        "position": "241"
     },
     {
         "card_name": "UM02",
@@ -1799,7 +1799,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "243"
+        "position": "242"
     },
     {
         "card_name": "UM02",
@@ -1807,7 +1807,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "244"
+        "position": "243"
     },
     {
         "card_name": "UM02",
@@ -1815,7 +1815,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "245"
+        "position": "244"
     },
     {
         "card_name": "er"
@@ -1972,7 +1972,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "249"
+        "position": "248"
     },
     {
         "card_name": "UA06",
@@ -1988,7 +1988,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "250"
+        "position": "249"
     },
     {
         "card_name": "",
@@ -1996,7 +1996,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "256"
+        "position": "255"
     },
     {
         "card_name": "CA01",
@@ -2020,7 +2020,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "246"
+        "position": "245"
     },
     {
         "card_name": "CA04",
@@ -2028,7 +2028,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "247"
+        "position": "246"
     },
     {
         "card_name": "CA05",
@@ -2036,7 +2036,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "248"
+        "position": "247"
     },
     {
         "card_name": "Overdrive Tracker",
@@ -2076,7 +2076,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "266"
+        "position": "265"
     },
     {
         "card_name": "UB LAND",
@@ -2084,7 +2084,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "261"
+        "position": "260"
     },
     {
         "card_name": "BR Land",
@@ -2092,15 +2092,15 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "257"
+        "position": "256"
     },
     {
-        "card_name": "Fanastical Forest",
-        "number": 257,
+        "card_name": "Briarwood Forest",
+        "number": 256,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "264"
+        "position": "263"
     },
     {
         "card_name": "GW land",
@@ -2108,7 +2108,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "259"
+        "position": "258"
     },
     {
         "card_name": "er"
@@ -2131,7 +2131,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "258"
+        "position": "257"
     },
     {
         "card_name": "UR land",
@@ -2139,7 +2139,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "260"
+        "position": "259"
     },
     {
         "card_name": "BG land",
@@ -2147,7 +2147,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "263"
+        "position": "262"
     },
     {
         "card_name": "RW land",
@@ -2155,7 +2155,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "262"
+        "position": "261"
     },
     {
         "card_name": "GU land",
@@ -2163,7 +2163,7 @@
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
-        "position": "265"
+        "position": "264"
     },
     {
         "card_name": "er"
@@ -2246,44 +2246,11 @@
     },
     {
         "card_name": "CL01",
-        "number": 256,
+        "number": 257,
         "shape": "normal",
         "set": "PWR",
         "rotated": false,
         "position": "194"
-    },
-    {
-        "card_name": "e"
-    },
-    {
-        "card_name": "er"
-    },
-    {
-        "card_name": "er"
-    },
-    {
-        "card_name": "er"
-    },
-    {
-        "card_name": "er"
-    },
-    "a->token",
-    {
-        "card_name": "Totally Average Civilian",
-        "number": 2,
-        "shape": "token",
-        "set": "PWR",
-        "rotated": false,
-        "position": "270"
-    },
-    {
-        "card_name": "e"
-    },
-    {
-        "card_name": "e"
-    },
-    {
-        "card_name": "e"
     },
     {
         "card_name": "e"

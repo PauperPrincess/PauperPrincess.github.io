@@ -195,7 +195,7 @@
 			"rarity": "common",
 			"mana_cost": "{3}{U}",
 			"type": "Artifact — Vehicle",
-			"collector_number": "63",
+			"collector_number": "62",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/19.png"
 			}
@@ -205,7 +205,7 @@
 			"rarity": "common",
 			"mana_cost": "{3}{U}",
 			"type": "Artifact Creature — Robot Villian",
-			"collector_number": "72",
+			"collector_number": "71",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/20.png"
 			}
@@ -221,11 +221,11 @@
 			}
 		},
 		{
-			"name": "CU08",
+			"name": "Some sort of Motorcycle?",
 			"rarity": "common",
 			"mana_cost": "{5}{U}",
 			"type": "Artifact — Vehicle",
-			"collector_number": "56",
+			"collector_number": "73",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/22.png"
 			}
@@ -235,7 +235,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "57",
+			"collector_number": "56",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/23.png"
 			}
@@ -245,7 +245,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "58",
+			"collector_number": "57",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/24.png"
 			}
@@ -255,7 +255,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "59",
+			"collector_number": "58",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/25.png"
 			}
@@ -265,7 +265,7 @@
 			"rarity": "common",
 			"mana_cost": "{1}{U}",
 			"type": "Sorccery",
-			"collector_number": "60",
+			"collector_number": "59",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/26.png"
 			}
@@ -275,7 +275,7 @@
 			"rarity": "common",
 			"mana_cost": "{U}",
 			"type": "Enchantment — Aura",
-			"collector_number": "73",
+			"collector_number": "72",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/27.png"
 			}
@@ -285,7 +285,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "61",
+			"collector_number": "60",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/28.png"
 			}
@@ -295,7 +295,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "62",
+			"collector_number": "61",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/29.png"
 			}
@@ -1325,7 +1325,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "66",
+			"collector_number": "65",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/132.png"
 			}
@@ -1335,7 +1335,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "67",
+			"collector_number": "66",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/133.png"
 			}
@@ -1345,7 +1345,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "68",
+			"collector_number": "67",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/134.png"
 			}
@@ -1355,7 +1355,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "69",
+			"collector_number": "68",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/135.png"
 			}
@@ -1365,7 +1365,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "70",
+			"collector_number": "69",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/136.png"
 			}
@@ -1375,7 +1375,7 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "71",
+			"collector_number": "70",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/137.png"
 			}
@@ -1605,7 +1605,7 @@
 			"rarity": "mythic",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "65",
+			"collector_number": "64",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/160.png"
 			}
@@ -1814,7 +1814,7 @@
 			"name": "Countdown to Destruction",
 			"rarity": "rare",
 			"mana_cost": "{2}{W}{B}",
-			"type": "Creature",
+			"type": "Enchan",
 			"collector_number": "213",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/181.png"
@@ -1945,7 +1945,7 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "256",
+			"collector_number": "257",
 			"image_uris": {
 				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/194.png"
 			}
@@ -2351,23 +2351,13 @@
 			}
 		},
 		{
-			"name": "Skeleton Info",
-			"rarity": "common",
-			"mana_cost": "",
-			"type": "",
-			"collector_number": "1",
-			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/235.png"
-			}
-		},
-		{
 			"name": "UM01",
 			"rarity": "rare",
 			"mana_cost": "{W}{U}",
 			"type": "Creature or Noncreature",
 			"collector_number": "231",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/236.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/235.png"
 			}
 		},
 		{
@@ -2377,7 +2367,7 @@
 			"type": "Artifact",
 			"collector_number": "216",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/237.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/236.png"
 			}
 		},
 		{
@@ -2387,7 +2377,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "235",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/238.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/237.png"
 			}
 		},
 		{
@@ -2397,7 +2387,7 @@
 			"type": "Legendary Creature — Human Wizard Ranger",
 			"collector_number": "210",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/239.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/238.png"
 			}
 		},
 		{
@@ -2407,7 +2397,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "237",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/240.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/239.png"
 			}
 		},
 		{
@@ -2417,7 +2407,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "238",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/241.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/240.png"
 			}
 		},
 		{
@@ -2427,7 +2417,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "232",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/242.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/241.png"
 			}
 		},
 		{
@@ -2437,7 +2427,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "233",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/243.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/242.png"
 			}
 		},
 		{
@@ -2447,7 +2437,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "236",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/244.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/243.png"
 			}
 		},
 		{
@@ -2457,7 +2447,7 @@
 			"type": "Creature or Noncreature",
 			"collector_number": "234",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/245.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/244.png"
 			}
 		},
 		{
@@ -2467,7 +2457,7 @@
 			"type": "Artifact Creature",
 			"collector_number": "242",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/246.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/245.png"
 			}
 		},
 		{
@@ -2477,7 +2467,7 @@
 			"type": "Artifact",
 			"collector_number": "243",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/247.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/246.png"
 			}
 		},
 		{
@@ -2487,7 +2477,7 @@
 			"type": "Artifact",
 			"collector_number": "244",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/248.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/247.png"
 			}
 		},
 		{
@@ -2497,7 +2487,7 @@
 			"type": "Artifact",
 			"collector_number": "250",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/249.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/248.png"
 			}
 		},
 		{
@@ -2507,7 +2497,7 @@
 			"type": "Artifact",
 			"collector_number": "252",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/250.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/249.png"
 			}
 		},
 		{
@@ -2517,7 +2507,7 @@
 			"type": "Instant",
 			"collector_number": "149",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/251.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/250.png"
 			}
 		},
 		{
@@ -2527,7 +2517,7 @@
 			"type": "Artifact Creature — Golem Plant Villain",
 			"collector_number": "187",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/252.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/251.png"
 			}
 		},
 		{
@@ -2537,7 +2527,7 @@
 			"type": "Legendary Artifact Creature — Villain",
 			"collector_number": "239",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/253.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/252.png"
 			}
 		},
 		{
@@ -2547,7 +2537,7 @@
 			"type": "Creature — Human Scientist",
 			"collector_number": "75",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/254.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/253.png"
 			}
 		},
 		{
@@ -2557,7 +2547,7 @@
 			"type": "Legendary Creature — Human Ranger",
 			"collector_number": "76",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/255.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/254.png"
 			}
 		},
 		{
@@ -2567,7 +2557,7 @@
 			"type": "",
 			"collector_number": "2",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/256.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/255.png"
 			}
 		},
 		{
@@ -2577,7 +2567,7 @@
 			"type": "Land",
 			"collector_number": "255",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/257.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/256.png"
 			}
 		},
 		{
@@ -2587,7 +2577,7 @@
 			"type": "Land",
 			"collector_number": "271",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/258.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/257.png"
 			}
 		},
 		{
@@ -2597,7 +2587,7 @@
 			"type": "Land",
 			"collector_number": "259",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/259.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/258.png"
 			}
 		},
 		{
@@ -2607,7 +2597,7 @@
 			"type": "Land",
 			"collector_number": "268",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/260.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/259.png"
 			}
 		},
 		{
@@ -2617,7 +2607,7 @@
 			"type": "Land",
 			"collector_number": "262",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/261.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/260.png"
 			}
 		},
 		{
@@ -2627,7 +2617,7 @@
 			"type": "Land",
 			"collector_number": "261",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/262.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/261.png"
 			}
 		},
 		{
@@ -2637,17 +2627,17 @@
 			"type": "Land",
 			"collector_number": "254",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/263.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/262.png"
 			}
 		},
 		{
-			"name": "Fanastical Forest",
+			"name": "Briarwood Forest",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "257",
+			"collector_number": "256",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/264.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/263.png"
 			}
 		},
 		{
@@ -2657,7 +2647,7 @@
 			"type": "Land",
 			"collector_number": "258",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/265.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/264.png"
 			}
 		},
 		{
@@ -2667,7 +2657,7 @@
 			"type": "Land",
 			"collector_number": "260",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/266.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/265.png"
 			}
 		},
 		{
@@ -2677,7 +2667,7 @@
 			"type": "Legendary Creature — Human Artificer Ranger",
 			"collector_number": "148",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/267.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/266.png"
 			}
 		},
 		{
@@ -2687,7 +2677,7 @@
 			"type": "Legendary Creature — Spirit Wizard Citizen",
 			"collector_number": "53",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/268.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/267.png"
 			}
 		},
 		{
@@ -2695,9 +2685,9 @@
 			"rarity": "mythic",
 			"mana_cost": "",
 			"type": "",
-			"collector_number": "64",
+			"collector_number": "63",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/269.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/268.png"
 			}
 		},
 		{
@@ -2705,9 +2695,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Creature",
-			"collector_number": "2",
+			"collector_number": "1",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/270.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/269.png"
 			}
 		},
 		{
@@ -2717,7 +2707,7 @@
 			"type": "Legendary Artifact — Vehicle",
 			"collector_number": "159",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/271.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/270.png"
 			}
 		},
 		{
@@ -2727,7 +2717,7 @@
 			"type": "Creature",
 			"collector_number": "54",
 			"image_uris": {
-				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/272.png"
+				"en": "https://PauperPrincess.github.io/sets/PWR-files/img/271.png"
 			}
 		}
 	]
@@ -2933,7 +2923,7 @@
 	8 GU Modified / UR Gattai
 	8 Sat Bot
 	8 The Squid Ink Inc. Squidrill™
-	8 CU08
+	8 Some sort of Motorcycle?
 	8 CU09
 	8 CU10
 	8 CU11
@@ -3002,7 +2992,7 @@
 	8 UB LAND
 	8 RW land
 	8 BG land
-	8 Fanastical Forest
+	8 Briarwood Forest
 	8 GU land
 	8 Newtech City
 	8 CU01
@@ -3029,7 +3019,7 @@
 	8 GU Modified / UR Gattai
 	8 Sat Bot
 	8 The Squid Ink Inc. Squidrill™
-	8 CU08
+	8 Some sort of Motorcycle?
 	8 CU09
 	8 CU10
 	8 CU11
@@ -3098,7 +3088,7 @@
 	8 UB LAND
 	8 RW land
 	8 BG land
-	8 Fanastical Forest
+	8 Briarwood Forest
 	8 GU land
 	8 Newtech City
 	8 CU01
@@ -3125,7 +3115,7 @@
 	12 GU Modified / UR Gattai
 	12 Sat Bot
 	12 The Squid Ink Inc. Squidrill™
-	12 CU08
+	12 Some sort of Motorcycle?
 	12 CU09
 	12 CU10
 	12 CU11
@@ -3366,7 +3356,7 @@
 	12 UB LAND
 	12 RW land
 	12 BG land
-	12 Fanastical Forest
+	12 Briarwood Forest
 	12 GU land
 	12 Newtech City
 	6 Flynn, Ranger Series Blue
@@ -3397,7 +3387,7 @@
 	6 GU Modified / UR Gattai
 	6 Sat Bot
 	6 The Squid Ink Inc. Squidrill™
-	6 CU08
+	6 Some sort of Motorcycle?
 	6 CU09
 	6 CU10
 	6 CU11
@@ -3638,7 +3628,7 @@
 	6 UB LAND
 	6 RW land
 	6 BG land
-	6 Fanastical Forest
+	6 Briarwood Forest
 	6 GU land
 	6 Newtech City
 	15 Flynn, Ranger Series Blue
